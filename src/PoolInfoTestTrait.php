@@ -45,7 +45,7 @@ trait PoolInfoTestTrait
      * @test
      * @dataProvider providePool
      */
-    public function assert_items_from_info_calls_are_all_intigers(PoolInfoInterface $poolInfo): void
+    public function assert_items_from_info_calls_are_all_integers(PoolInfoInterface $poolInfo): void
     {
         foreach ($poolInfo->info() as $key => $value) {
             self::assertIsInt($value);
