@@ -9,6 +9,20 @@
         "text": "infection.log"
     },
     "mutators": {
-        "@default": true
+        "@default": true,
+        "PublicVisibility": {
+            "ignore": [
+                "WyriHaximus\\PoolInfo\\PoolInfoTestTrait::assert_all_items_from_Info_are_returned_from_info_call",
+                "WyriHaximus\\PoolInfo\\PoolInfoTestTrait::assert_items_from_info_calls_are_all_integers",
+                "WyriHaximus\\PoolInfo\\PoolInfoTestTrait::providePool"
+            ]
+        },
+        "MethodCallRemoval": {
+            "ignore": [
+                "WyriHaximus\\PoolInfo\\PoolInfoTestTrait::assert_all_items_from_Info_are_returned_from_info_call",
+                "WyriHaximus\\PoolInfo\\PoolInfoTestTrait::assert_items_from_info_calls_are_all_integers",
+                "WyriHaximus\\PoolInfo\\PoolInfoTestTrait::providePool"
+            ]
+        }
     }
 }

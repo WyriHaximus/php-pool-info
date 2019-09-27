@@ -2,6 +2,8 @@
 
 namespace WyriHaximus\PoolInfo;
 
+use const WyriHaximus\Constants\Boolean\FALSE_;
+use const WyriHaximus\Constants\Boolean\TRUE_;
 use function WyriHaximus\iteratorOrArrayToArray;
 use WyriHaximus\TestUtilities\TestCase;
 
@@ -47,9 +49,12 @@ trait PoolInfoTestTrait
      */
     public function assert_items_from_info_calls_are_all_integers(PoolInfoInterface $poolInfo): void
     {
+        $notEmpty = FALSE_;
         foreach ($poolInfo->info() as $key => $value) {
             self::assertIsInt($value);
+            $notEmpty = TRUE_;
         }
+        self::assertTrue($notEmpty);
     }
 
     abstract protected function poolFactory(): iterable;
