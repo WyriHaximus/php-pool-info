@@ -14,7 +14,7 @@
     "wyrihaximus/iterator-or-array-to-array": "^1.1"
   },
   "require-dev": {
-    "wyrihaximus/test-utilities": "^1.2"
+    "wyrihaximus/test-utilities": "^1.2 || ^5.0"
   },
   "config": {
     "platform": {
