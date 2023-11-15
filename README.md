@@ -1,8 +1,9 @@
 # php-pool-info
 
-[![Build Status](https://travis-ci.com/WyriHaximus/php-pool-info.png)](https://travis-ci.com/WyriHaximus/php-pool-info)
-[![Latest Stable Version](https://poser.pugx.org/WyriHaximus/pool-info/v/stable.png)](https://packagist.org/packages/WyriHaximus/pool-info)
-[![Total Downloads](https://poser.pugx.org/WyriHaximus/pool-info/downloads.png)](https://packagist.org/packages/WyriHaximus/pool-info)
+![Continuous Integration](https://github.com/wyrihaximus/php-pool-info/workflows/Continuous%20Integration/badge.svg)
+[![Latest Stable Version](https://poser.pugx.org/wyrihaximus/pool-info/v/stable.png)](https://packagist.org/packages/wyrihaximus/pool-info)
+[![Total Downloads](https://poser.pugx.org/wyrihaximus/pool-info/downloads.png)](https://packagist.org/packages/wyrihaximus/pool-info/stats)
+[![Type Coverage](https://shepherd.dev/github/WyriHaximus/php-pool-info/coverage.svg)](https://shepherd.dev/github/WyriHaximus/php-pool-info)
 [![License](https://poser.pugx.org/wyrihaximus/pool-info/license.png)](https://packagist.org/packages/wyrihaximus/pool-info)
 
 Interface for pool info metrics
@@ -12,7 +13,7 @@ Interface for pool info metrics
 To install via [Composer](http://getcomposer.org/), use the command below, it will automatically detect the latest version and bind it with `~`.
 
 ```
-composer require wyrihaximus/pool-info 
+composer require wyrihaximus/pool-info
 ```
 
 ## License ##

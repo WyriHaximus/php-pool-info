@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace WyriHaximus\Tests\PoolInfo;
 
@@ -9,27 +11,27 @@ final class PoolInfoStub implements PoolInfoInterface
 {
     use PoolInfoTrait;
 
-    protected function infoBusy(): int
+    private function infoBusy(): int
     {
         return 1;
     }
 
-    protected function infoCalls(): int
+    private function infoCalls(): int
     {
         return 2;
     }
 
-    protected function infoIdle(): int
+    private function infoIdle(): int
     {
         return 3;
     }
 
-    protected function infoSize(): int
+    private function infoSize(): int
     {
         return 4;
     }
 
-    protected function infoTotal(): int
+    private function infoTotal(): int
     {
         return 5;
     }
