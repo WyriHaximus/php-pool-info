@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace WyriHaximus\PoolInfo;
 
@@ -7,7 +9,7 @@ final class Info
     /**
      * The amount of workers busy handling calls.
      */
-    public const BUSY  = 'busy';
+    public const BUSY = 'busy';
 
     /**
      * The amount of calls queued.
@@ -17,12 +19,12 @@ final class Info
     /**
      * The amount of workers idling waiting for calls.
      */
-    public const IDLE  = 'idle';
+    public const IDLE = 'idle';
 
     /**
      * The current pool size.
      */
-    public const SIZE  = 'size';
+    public const SIZE = 'size';
 
     /**
      * The configured total pool size.

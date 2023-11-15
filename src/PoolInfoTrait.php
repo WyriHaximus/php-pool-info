@@ -1,10 +1,13 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace WyriHaximus\PoolInfo;
 
 trait PoolInfoTrait
 {
-    public function info(): iterable
+    /** @return iterable<string, int> */
+    final public function info(): iterable
     {
         yield Info::TOTAL => $this->infoTotal();
         yield Info::BUSY => $this->infoBusy();

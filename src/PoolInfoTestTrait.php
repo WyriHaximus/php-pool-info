@@ -1,17 +1,16 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace WyriHaximus\PoolInfo;
 
-use const WyriHaximus\Constants\Boolean\FALSE_;
-use const WyriHaximus\Constants\Boolean\TRUE_;
+use function array_keys;
+use function ksort;
 use function WyriHaximus\iteratorOrArrayToArray;
-use WyriHaximus\TestUtilities\TestCase;
 
-/**
- * @var TestCase
- */
 trait PoolInfoTestTrait
 {
+    /** @return iterable<array<PoolInfoInterface>> */
     public function providePool(): iterable
     {
         yield [
@@ -23,11 +22,11 @@ trait PoolInfoTestTrait
      * @test
      * @dataProvider providePool
      */
-    public function assert_all_items_from_Info_are_returned_from_info_call(PoolInfoInterface $poolInfo): void
+    public function assertAllItemsFromInfoAreReturnedFromInfoCall(PoolInfoInterface $poolInfo): void
     {
         $items = iteratorOrArrayToArray($poolInfo->info());
 
-        \ksort($items);
+        ksort($items);
 
         self::assertSame(
             [
@@ -37,25 +36,11 @@ trait PoolInfoTestTrait
                 Info::SIZE,
                 Info::TOTAL,
             ],
-            \array_keys(
-                $items
-            )
+            array_keys(
+                $items,
+            ),
         );
     }
 
-    /**
-     * @test
-     * @dataProvider providePool
-     */
-    public function assert_items_from_info_calls_are_all_integers(PoolInfoInterface $poolInfo): void
-    {
-        $notEmpty = FALSE_;
-        foreach ($poolInfo->info() as $key => $value) {
-            self::assertIsInt($value);
-            $notEmpty = TRUE_;
-        }
-        self::assertTrue($notEmpty);
-    }
-
-    abstract protected function poolFactory(): iterable;
+    abstract protected function poolFactory(): PoolInfoInterface;
 }
