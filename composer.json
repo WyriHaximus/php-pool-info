@@ -9,8 +9,7 @@
     }
   ],
   "require": {
-    "php": "^8.2",
-    "wyrihaximus/iterator-or-array-to-array": "^1.1"
+    "php": "^8.2"
   },
   "require-dev": {
     "wyrihaximus/test-utilities": "^5.6"
