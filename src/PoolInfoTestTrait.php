@@ -6,7 +6,6 @@ namespace WyriHaximus\PoolInfo;
 
 use function array_keys;
 use function ksort;
-use function WyriHaximus\iteratorOrArrayToArray;
 
 trait PoolInfoTestTrait
 {
@@ -24,7 +23,7 @@ trait PoolInfoTestTrait
      */
     public function assertAllItemsFromInfoAreReturnedFromInfoCall(PoolInfoInterface $poolInfo): void
     {
-        $items = iteratorOrArrayToArray($poolInfo->info());
+        $items = [...$poolInfo->info()];
 
         ksort($items);
 
