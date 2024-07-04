@@ -10,10 +10,10 @@ use function ksort;
 trait PoolInfoTestTrait
 {
     /** @return iterable<array<PoolInfoInterface>> */
-    public function providePool(): iterable
+    public static function providePool(): iterable
     {
         yield [
-            $this->poolFactory(),
+            static::poolFactory(),
         ];
     }
 
@@ -41,5 +41,5 @@ trait PoolInfoTestTrait
         );
     }
 
-    abstract protected function poolFactory(): PoolInfoInterface;
+    abstract protected static function poolFactory(): PoolInfoInterface;
 }
