@@ -13,7 +13,7 @@ final class PoolInfoTest extends TestCase
 {
     use PoolInfoTestTrait;
 
-    private function poolFactory(): PoolInfoInterface
+    private static function poolFactory(): PoolInfoInterface
     {
         return new PoolInfoStub();
     }
