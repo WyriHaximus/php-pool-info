@@ -9,7 +9,7 @@
     }
   ],
   "require": {
-    "php": "^7.3",
+    "php": "^8 || ^7.3",
     "wyrihaximus/constants": "^1.2",
     "wyrihaximus/iterator-or-array-to-array": "^1.1"
   },
@@ -20,7 +20,14 @@
     "platform": {
       "php": "7.3"
     },
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "infection/extension-installer": true,
+      "ergebnis/composer-normalize": true,
+      "ocramius/package-versions": true,
+      "localheinz/composer-normalize": true
+    }
   },
   "autoload": {
     "psr-4": {
@@ -33,12 +40,6 @@
     }
   },
   "scripts": {
-    "post-install-cmd": [
-      "composer normalize"
-    ],
-    "post-update-cmd": [
-      "composer normalize"
-    ],
     "ci-coverage": [
       "if [ -f ./build/logs/clover.xml ]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover ./build/logs/clover.xml; fi"
     ],
