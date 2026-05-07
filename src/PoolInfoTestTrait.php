@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace WyriHaximus\PoolInfo;
 
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Test;
+
 use function array_keys;
 use function ksort;
 
@@ -17,10 +20,8 @@ trait PoolInfoTestTrait
         ];
     }
 
-    /**
-     * @test
-     * @dataProvider providePool
-     */
+    #[DataProvider('providePool')]
+    #[Test]
     public function assertAllItemsFromInfoAreReturnedFromInfoCall(PoolInfoInterface $poolInfo): void
     {
         $items = [...$poolInfo->info()];
