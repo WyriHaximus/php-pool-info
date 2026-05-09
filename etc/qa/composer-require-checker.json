@@ -2,8 +2,8 @@
   "symbol-whitelist" : [
     "null", "true", "false",
     "static", "self", "parent",
-    "array", "string", "int", "float", "bool", "iterable", "callable", "void", "object", "mixed",
-    "WyriHaximus\\iteratorOrArrayToArray"
+    "array", "string", "int", "float", "bool", "iterable", "callable", "void", "object",
+    "PHPUnit\\Framework\\Attributes\\DataProvider", "PHPUnit\\Framework\\Attributes\\Test"
   ],
   "php-core-extensions" : [
     "Core",

@@ -12,22 +12,8 @@
     "php": "^8.4"
   },
   "require-dev": {
-    "wyrihaximus/makefiles": "^0.7.6",
+    "wyrihaximus/makefiles": "^0.10.6",
     "wyrihaximus/test-utilities": "^12.2.0"
-  },
-  "config": {
-    "platform": {
-      "php": "8.4.13"
-    },
-    "sort-packages": true,
-    "allow-plugins": {
-      "dealerdirect/phpcodesniffer-composer-installer": true,
-      "ergebnis/composer-normalize": true,
-      "infection/extension-installer": true,
-      "phpstan/extension-installer": true,
-      "wyrihaximus/makefiles": true,
-      "wyrihaximus/test-utilities": true
-    }
   },
   "autoload": {
     "psr-4": {
@@ -38,6 +24,20 @@
     "psr-4": {
       "WyriHaximus\\Tests\\PoolInfo\\": "tests/"
     }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "ergebnis/composer-normalize": true,
+      "infection/extension-installer": true,
+      "phpstan/extension-installer": true,
+      "wyrihaximus/makefiles": true,
+      "wyrihaximus/test-utilities": true
+    },
+    "platform": {
+      "php": "8.4.13"
+    },
+    "sort-packages": true
   },
   "scripts": {
     "post-install-cmd": [

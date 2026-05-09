@@ -8,7 +8,6 @@ use WyriHaximus\PoolInfo\PoolInfoInterface;
 use WyriHaximus\PoolInfo\PoolInfoTestTrait;
 use WyriHaximus\TestUtilities\TestCase;
 
-/** @internal */
 final class PoolInfoTest extends TestCase
 {
     use PoolInfoTestTrait;
